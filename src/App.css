@@ -66,3 +66,6 @@ button:focus-visible { outline: 3px solid #9dbc83; outline-offset: 3px; }
 .about-copy p { color: #67766b; line-height: 1.85; }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 25px 6vw; background: #173d2b; color: #dce9d9; font-size: 13px; }
 @media (max-width: 760px) { .site-header { padding: 0 18px; height: auto; min-height: 70px; flex-wrap: wrap; gap: 8px; } .brand { font-size: 18px; } .main-nav { order: 3; width: 100%; height: 43px; justify-content: center; gap: 22px; } .cart-nav { padding: 8px 12px; } .landing { min-height: 590px; } .hero-content { margin-left: 7vw; padding-right: 20px; } .cart-layout, .about-grid { grid-template-columns: 1fr; } .cart-row { grid-template-columns: 75px 1fr; } .cart-row img { width: 75px; height: 85px; } .cart-line-total { grid-column: 2; text-align: left; } .site-footer { flex-direction: column; text-align: center; } }
+
+.add-button:disabled { background: #9aa99b; color: #fff; cursor: not-allowed; opacity: .9; }
+.cart-count { display: inline-grid; place-items: center; min-width: 22px; height: 22px; margin-left: 5px; padding: 0 5px; border-radius: 50%; background: #28583c; color: #fff; font-size: 12px; font-weight: 700; }
