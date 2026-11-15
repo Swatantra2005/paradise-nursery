@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <header className="site-header">
+      {page !== 'shop' && <header className="site-header">
         <button className="brand" onClick={() => setPage('home')} aria-label="Paradise Nursery home">
           <span className="brand-mark">✿</span><span>Paradise <strong>Nursery</strong></span>
         </button>
@@ -20,7 +20,7 @@ export default function App() {
           <button className={page === 'about' ? 'active' : ''} onClick={() => setPage('about')}>About Us</button>
         </nav>
         <button className="cart-nav" onClick={() => setPage('cart')} aria-label={`Shopping cart with ${cartCount} items`}>🛒 Cart <span className="cart-count">{cartCount}</span></button>
-      </header>
+      </header>}
       {page === 'home' && (
         <main className="landing">
           <div className="landing-image" role="img" aria-label="Sunlit room filled with indoor plants" />
@@ -34,7 +34,7 @@ export default function App() {
           </section>
         </main>
       )}
-      {page === 'shop' && <ProductList onOpenCart={() => setPage('cart')} />}
+      {page === 'shop' && <ProductList onOpenCart={() => setPage('cart')} onGoHome={() => setPage('home')} onGoAbout={() => setPage('about')} />}
       {page === 'cart' && <CartItem onContinueShopping={() => setPage('shop')} />}
       {page === 'about' && <AboutUs />}
       <footer className="site-footer"><span>✿ Paradise Nursery</span><span>Grow joy, one leaf at a time.</span></footer>
