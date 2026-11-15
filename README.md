@@ -1,53 +1,50 @@
-# Paradise Nursery
+# Paradise Nursery Shopping Application
 
-Paradise Nursery is a responsive React plant-shop experience for discovering indoor plants and managing a shopping cart.
+Paradise Nursery is a React shopping application for an online houseplant nursery. Customers can explore houseplants grouped into categories, add plants to a shopping cart, change quantities, remove items, and view the cart total.
 
-## Project features
-- Landing page with the Paradise Nursery name and a **Get Started** call to action.
-- About Us section describing the nursery and its mission.
-- Product catalogue grouped by plant category.
-- Add-to-cart, remove-from-cart, and quantity update actions.
-- Redux Toolkit cart state using `addItem`, `removeItem`, and `updateQuantity` reducers.
-- Cart subtotal and item count calculations.
-- Responsive layout for desktop, tablet, and mobile screens.
+## Features
 
-## Built with
-- React
+### Landing page
+- Paradise Nursery company name and introduction
+- Full-width background image
+- **Get Started** button that opens the product listing
+
+### Product listing
+- Nine houseplants organized into three categories
+- Product image, name, description, and price
+- Add to Cart button with an added/disabled state
+- Dynamic cart count in the navigation bar
+
+### Shopping cart
+- Displays each selected plant with thumbnail, name, unit price, and line total
+- Increase and decrease quantity controls
+- Delete action for each item
+- Dynamic item count and total cost
+- Continue Shopping controls and Checkout alert
+
+## Technology
+- React 18
 - Vite
-- Redux Toolkit
-- React Redux
+- Redux Toolkit and React Redux
 - CSS
 
-## Run locally
-1. Install Node.js (LTS).
-2. Clone this repository.
-3. In the project directory, run:
-   ```bash
-   npm install
-   npm run dev
-   ```
-4. Open the local URL printed by Vite.
+## Main project files
+- `src/App.jsx` — application navigation and landing page
+- `src/App.css` — page layout, landing background, and responsive styles
+- `src/AboutUs.jsx` — company information
+- `src/CartSlice.jsx` — Redux reducers: `addItem`, `removeItem`, and `updateQuantity`
+- `src/ProductList.jsx` — categorized plant catalogue
+- `src/CartItem.jsx` — shopping cart interface
+- `src/plants.js` — plant catalogue data
+- `src/store/store.js` — Redux store configuration
 
-To create a production build:
+## Run locally
+```bash
+npm install
+npm run dev
+``
+
+Create a production build with:
 ```bash
 npm run build
-```
-
-## Project structure
-```
-src/
-  components/
-    AboutUs.jsx
-    CartItem.jsx
-    ProductList.jsx
-  data/
-    plants.js
-  features/
-    cart/
-      CartSlice.jsx
-  store/
-    store.js
-  App.jsx
-  App.css
-  main.jsx
-```
+``
